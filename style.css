@@ -6,4 +6,126 @@
 
 body {
   background-color: #000;
+  color: #fff;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*
+  Mobile View
+*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*/
+h1,
+h2 {
+  text-align: center;
+}
+
+.calculadora {
+  border: 2px solid #ff6600;
+  border-radius: 20px;
+  width: 90%;
+  height: 32.5rem;
+}
+
+.calculadora .display {
+  width: 95%;
+  height: 3.5rem;
+  margin: 1rem auto;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculadora .exponente {
+  font-size: 1.5rem;
+  margin-top: -1rem;
+}
+
+.calculadora .display input {
+  background-color: #ffffff88;
+  height: 2.5rem;
+  outline: none;
+  border: 0;
+  text-align: center;
+  color: #fff;
+  font-size: 2.25rem;
+}
+
+.calculadora .display .variable,
+.calculadora .display .numero {
+  width: 4rem;
+}
+
+.calculadora .display .variable {
+  margin-left: 0.5rem;
+}
+
+.calculadora .display .numero {
+  margin-right: 0.5rem;
+}
+
+.calculadora .display .signo {
+  width: 2.5rem;
+  margin: 0 0.5rem;
+}
+
+.calculadora .botones {
+  width: 95%;
+  height: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.calculadora .botones button {
+  width: 22.5%;
+  height: 5rem;
+  font-size: 2rem;
+  outline: none;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.calculadora .botones .num {
+  background-color: #ff6600;
+}
+
+.calculadora .botones .operadorVariable {
+  background-color: #444;
+}
+
+.calculadora .botones .igual {
+  background-color: #e3ba39;
+  color: #000;
+}
+
+.calculadora .botones .borrar {
+  background-color: #f00;
+}
+
+/*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*
+  IPad View
+*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*/
+@media screen and (min-width: 768px) {
+  .calculadora {
+    width: 50%;
+  }
+}
+
+/*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*
+  Desktop View
+*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*/
+@media screen and (min-width: 1000px) {
+  .calculadora {
+    width: 25%;
+  }
 }
