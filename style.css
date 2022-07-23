@@ -47,31 +47,29 @@ h2 {
   margin-top: -1rem;
 }
 
-.calculadora .display input {
+.calculadora .display .input {
+  display: inline-block;
   background-color: #ffffff88;
   height: 2.5rem;
-  outline: none;
-  border: 0;
   text-align: center;
   color: #fff;
-  font-size: 2.25rem;
-}
-
-.calculadora .display .variable,
-.calculadora .display .numero {
-  width: 4rem;
+  font-size: 1.75rem;
+  line-height: 2.5rem;
 }
 
 .calculadora .display .variable {
+  width: 10%;
   margin-left: 0.5rem;
 }
 
 .calculadora .display .numero {
+  width: 60%;
   margin-right: 0.5rem;
+  overflow-x: auto;
 }
 
 .calculadora .display .signo {
-  width: 2.5rem;
+  width: 7.5%;
   margin: 0 0.5rem;
 }
 
