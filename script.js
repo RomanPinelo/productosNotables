@@ -101,7 +101,18 @@ btnNueve.addEventListener('click', function(){
 });
 
 btnBorrar.addEventListener('click', function(){
-  displayVariable.innerHTML = "";
-  displaySigno.innerHTML = "";
-  displayNumero.innerHTML = "";
+  window.location.reload()
+});
+
+btnIgual.addEventListener('click', function(){
+  numeroDisplay = displayNumero.innerText;
+  let variableUsada = displayVariable.innerText;
+  let signoUsado = displaySigno.innerHTML;
+  let segundoTermino;
+  let tercerTermino;
+
+  segundoTermino = numeroDisplay * 2;
+  tercerTermino = Math.pow(numeroDisplay, 2);
+
+  displayDisplay.innerHTML = `<p class="resultado">${variableUsada}<sup>2</sup> ${signoUsado} ${segundoTermino}${variableUsada} + ${tercerTermino}</p>`;
 });
