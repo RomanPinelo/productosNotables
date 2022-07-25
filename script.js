@@ -22,6 +22,10 @@ var btnBorrar = document.getElementById("borrar");
 
 var numeroDisplay = "";
 
+var ventanaModal = document.getElementById("modal");
+var btnModal = document.getElementById("cerrarModal");
+var textModal = document.getElementById("textoModal");
+
 
 // Eventos de los botones
 btnEquis.addEventListener('click', function(){
@@ -101,18 +105,47 @@ btnNueve.addEventListener('click', function(){
 });
 
 btnBorrar.addEventListener('click', function(){
-  window.location.reload()
+  window.location.reload();
+});
+
+btnModal.addEventListener('click', function(){
+  textModal.innerHTML = "";
+  ventanaModal.classList.toggle("visible");
 });
 
 btnIgual.addEventListener('click', function(){
-  numeroDisplay = displayNumero.innerText;
-  let variableUsada = displayVariable.innerText;
-  let signoUsado = displaySigno.innerHTML;
-  let segundoTermino;
-  let tercerTermino;
+  if ((displayVariable.innerText == "") && (displaySigno.innerText == "") && (displayNumero.innerText == "")) {
+    ventanaModal.classList.toggle("visible");
+    textModal.innerHTML = "Introduce una variable, un signo y un número.";
+  } else if ((displayVariable.innerText == "") && (displaySigno.innerText == "")) {
+    ventanaModal.classList.toggle("visible");
+    textModal.innerHTML = "Introduce una variable y un signo.";
+  } else if ((displayVariable.innerText == "") && (displayNumero.innerText == "")) {
+    ventanaModal.classList.toggle("visible");
+    textModal.innerHTML = "Introduce una variable y un número.";
+  } else if ((displaySigno.innerText == "") && (displayNumero.innerText == "")) {
+    ventanaModal.classList.toggle("visible");
+    textModal.innerHTML = "Introduce un signo y un número.";
+  } else if (displayVariable.innerText == "") {
+    ventanaModal.classList.toggle("visible");
+    textModal.innerHTML = "Introduce una variable.";
+  } else if (displaySigno.innerText == "") {
+    ventanaModal.classList.toggle("visible");
+    textModal.innerHTML = "Introduce un signo.";
+  } else if (displayNumero.innerText == "") {
+    ventanaModal.classList.toggle("visible");
+    textModal.innerHTML = "Introduce un número.";
+  } else {
+    numeroDisplay = displayNumero.innerText;
+    let variableUsada = displayVariable.innerText;
+    let signoUsado = displaySigno.innerHTML;
+    let segundoTermino;
+    let tercerTermino;
 
-  segundoTermino = numeroDisplay * 2;
-  tercerTermino = Math.pow(numeroDisplay, 2);
+    segundoTermino = numeroDisplay * 2;
+    tercerTermino = Math.pow(numeroDisplay, 2);
 
-  displayDisplay.innerHTML = `<p class="resultado">${variableUsada}<sup>2</sup> ${signoUsado} ${segundoTermino}${variableUsada} + ${tercerTermino}</p>`;
+    displayDisplay.innerHTML = `<p class="resultado">${variableUsada}<sup>2</sup> ${signoUsado} ${segundoTermino}${variableUsada} + ${tercerTermino}</p>`;
+  }
+
 });
