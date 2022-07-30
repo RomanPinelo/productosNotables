@@ -50,7 +50,6 @@ Al presionar el botón AC, se reinicia la pagina y vuelven a aparecer los inputs
 
 
 
-
 En el siguiente link puedes ver la página funcionando: 
 
 https://romanpinelo.github.io/productosNotables/
