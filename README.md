@@ -18,6 +18,7 @@ José Román Pinelo Escobar
 ### Explicación
 
 El objetivo principal de esta página es practicar la programación con JavaScript.
+
 Consiste en una calculadora de binomio al cuadrado sencillo. Tiene tres inputs donde se introducen una variable, un signo y un número.
 
 ![1](https://user-images.githubusercontent.com/71656431/181997217-40ff45c4-351e-493c-b306-e293b3f3a11d.jpg)
